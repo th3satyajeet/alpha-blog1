@@ -1,2 +1,27 @@
+$navbar-default-bg: #123C69;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #EEE2DC;
+    font-weight: bold;
+}
+
+#article, #about_us, #actions, #link, #dropdown{
+    float: left;
+    color: #EEE2DC;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #EEE2DC;
+}
+
+.center {
+    text-align: center;
+    font-weight: bold;
+}
+
