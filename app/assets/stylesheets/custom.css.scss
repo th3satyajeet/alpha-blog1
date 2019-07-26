@@ -27,13 +27,13 @@ $navbar-default-bg: rgb(1, 64, 100);
 
 .jumbotron {
     // background-image: linear-gradient(#EDC7B7, #EEE2DC, #BAB2B5)
-    background-image: url('img1.jpg');
+    background-image: asset-url('img1.jpg');
     background-size: cover;
     height : 600px;
 }
 
 .articles, .new {
-    background-image: url('img1.jpg');
+    background-image: asset-url('img1.jpg');
     background-size: cover;
     height : 600px;
     text-align: center;
