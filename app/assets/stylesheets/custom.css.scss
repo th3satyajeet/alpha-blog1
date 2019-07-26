@@ -25,3 +25,14 @@ $navbar-default-bg: #123C69;
     font-weight: bold;
 }
 
+.jumbotron {
+    // background-image: linear-gradient(#EDC7B7, #EEE2DC, #BAB2B5)
+    background-image: url('img1.jpg');
+    background-size: cover;
+    height : 600px;
+}
+
+#hello {
+    color: #0B0C10;
+}
+
