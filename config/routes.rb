@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #pages
   root 'pages#home'
   get 'about',to: 'pages#about'
+  get 'contact',to: 'pages#contact'
 
   resources :articles
   #This one line will add  diff pages tht are required for like edit, update, delete etc.
