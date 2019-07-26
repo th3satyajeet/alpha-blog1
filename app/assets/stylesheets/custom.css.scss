@@ -1,4 +1,4 @@
-$navbar-default-bg: #123C69;
+$navbar-default-bg: rgb(1, 64, 100);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -32,7 +32,29 @@ $navbar-default-bg: #123C69;
     height : 600px;
 }
 
-#hello {
-    color: #0B0C10;
+.articles, .new {
+    background-image: url('img1.jpg');
+    background-size: cover;
+    height : 600px;
+    text-align: center;
 }
+
+#hello, #listing, #create{
+    color: #9A1750;
+    font-weight: bold;
+}
+
+.btn-lg {
+    background-color: #9A1750;
+}
+
+.footer {
+    background-color: rgb(1, 64, 100);
+    font-weight: bold;
+    color: #EEE2DC;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+  
 
