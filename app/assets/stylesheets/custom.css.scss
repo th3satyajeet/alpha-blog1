@@ -37,9 +37,16 @@ $navbar-default-bg: rgb(1, 64, 100);
     background-size: cover;
     height : 600px;
     text-align: center;
+    padding-top: 5px;
 }
 
 #hello, #listing, #create{
+    color: #9A1750;
+    font-weight: bold;
+}
+
+.edit-exist {
+    text-align: center;
     color: #9A1750;
     font-weight: bold;
 }
@@ -57,4 +64,22 @@ $navbar-default-bg: rgb(1, 64, 100);
     padding: 15px;
 }
   
+.article-actions {
+    border-top: 1px solid #eaeaea;  
+    padding-top: 5px;
+}
+    
+.description {  
+    margin-top: 0;  
+}
+
+.article-title {
+    font-weight: bold;
+    font-size: 1.5em; 
+    } 
+.article-body { 
+    border-top: 1px solid #eaeaea; 
+    padding-top: 15px; 
+    padding-bottom: 15px;
+}
 
