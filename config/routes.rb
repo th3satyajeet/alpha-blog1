@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'about',to: 'pages#about'
   get 'contact',to: 'pages#contact'
 
+  #sign up
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
+
   resources :articles
   #This one line will add  diff pages tht are required for like edit, update, delete etc.
 
