@@ -1,0 +1,36 @@
+
+<%# <%= link_to 'Alpha Blog', articles_path | <%= link_to 'About', about_path %> 
+
+<div class="center jumbotron">
+  <p><h1 id="hello">Hello, Welcome to Alpha Blog!</h1></p><br/><br/>
+  <p> Hey ! this is Satyajeet here.. </p>
+  <%# <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> %>
+  <center>
+    <div class="home-login">
+      <h4>Log in to your Account</h4>
+      <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+        <div class="form-group">
+          <div class="col-sm-10 email">
+          <%= f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-5 password">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "off" %>
+          </div>
+        </div>
+        <p><h6 style="color: #247BE6">Forgot password ?</h6></p>
+        <div class="form-group">
+          <div class="login-btn">
+            <%# <%= f.submit "Log in", class: 'btn btn-primary btn-block'%> 
+            <%= link_to "Log in", login_path, class: 'btn btn-primary btn-sm btn-block'%>
+          </div>
+        </div>
+        <p><h6>Create an Account? </h6><h6 style="color: #247BE6"><%= link_to "Sign up", signup_path %></h6></p>
+      <% end %>
+    </div>
+  </center>
+
+  <%# <p><%= link_to "Sign Up now", signup_path, class:"btn btn-primary btn-lg" %>
+  <%# <p><%= link_to "Edit your Accout", users_@user.id_path %>
+</div>

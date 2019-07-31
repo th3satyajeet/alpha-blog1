@@ -10,7 +10,27 @@ $navbar-default-bg: rgb(1, 64, 100);
     font-weight: bold;
 }
 
-#article, #about_us, #actions, #link, #dropdown, #home, #contact_us, #einfochips, #ruby, #rails{
+.home-login {
+    height: 280px;
+    width: 260px;
+    background-color: #eaeaea;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.login-btn {
+    padding-left: 16px;
+    padding-right: 28px;
+}
+
+.email, .password {
+    width: max-content;
+}
+
+#article, #users, #about_us, #actions, #signup, #yourprofile, #home, #contact_us, #ruby, #rails, #login, #logout{
     float: left;
     color: #EEE2DC;
     font-weight: bold;

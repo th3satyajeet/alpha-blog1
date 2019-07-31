@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
 
+  #Login and Logout
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
   resources :articles
   #This one line will add  diff pages tht are required for like edit, update, delete etc.
 

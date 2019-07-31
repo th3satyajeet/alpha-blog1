@@ -1,65 +1,125 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+<div class="container-fluid">
+
+<!-- Brand and toggle get grouped for better mobile display -->
+
+<div class="navbar-header">
+
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
         <span class="sr-only">Toggle navigation</span>
+
         <span class="icon-bar"></span>
+
         <span class="icon-bar"></span>
+
         <span class="icon-bar"></span>
-      </button>
-      <%# <a class="navbar-brand" id="logo" href="#">Alpha Blog</a> %>
-      <%= link_to "Alpha Blog", root_path, class: "navbar-brand", id: "logo" %>
+
+    </button>
+
+    <%= link_to "Alpha Blog", root_path, class: "navbar-brand", id: "logo" %>
+
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<ul class="nav navbar-nav">
+
+    <li><%= link_to "Articles", articles_path, id: "article" %></li>
+
+    <li><%= link_to "Users", users_path, id: "users" %></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="actions">ROR Imp Docs<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><%= link_to "Ruby on Rails", "https://guides.rubyonrails.org/" %></li>
+            <li><%= link_to "Hello World using RSpec & Capybara", "https://www.codewithjason.com/rails-testing-hello-world-using-rspec-capybara/" %></li>
+            
+        </ul>
+    </li>
+
+    <% if logged_in? %>
+
+        <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="actions">Actions <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+
+                <li><%= link_to "New Article", new_article_path %></li>
+
+                <li><a href="#">Another action</a></li>
+
+                <li><a href="#">Something else here</a></li>
+
+                <li role="separator" class="divider"></li>
+
+                <li><a href="#">Separated link</a></li>
+
+                <li role="separator" class="divider"></li>
+
+                <li><a href="#">One more separated link</a></li>
+
+            </ul>
+
+        </li>
+
+    <% end %>
+
+</ul>
+
+<form class="navbar-form navbar-left" role="search">
+
+    <div class="form-group">
+
+        <input type="text" class="form-control" placeholder="Search">
+
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_path, id: "home" %></li>
-        <%# <li><a href="#">Link</a></li> %>
-        <li><%= link_to "About Us", about_path, id: "about_us"%></li>
-        <%# <li><a href="#">Link <span class="sr-only">(current)</span></a></li> %>
-        <li><%= link_to "Articles", articles_path, id: "article" %></li>
-        <li><%= link_to "Our Company", "https://www.einfochips.com/", id: "einfochips" %></li>
-        <li><%= link_to "Learn Ruby", "https://www.learnrubyonline.org/", id: "ruby" %></li>
-        <li><%= link_to "Learn Rails", "https://guides.rubyonrails.org/", id: "rails" %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="actions">Actions <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <%# <li><a href="#">Action</a></li> %>
-            <li><%= link_to "New Article", new_article_path %></li>
-            <%# <li><a href="#">Another action</a></li> %>
-            <li><%= link_to "All Articles", articles_path %></li>
-            <%# <li><a href="#">Something else here</a></li> %>
-            <li><%= link_to "All Users", users_path %></li>
-            <li role="separator" class="divider"></li>
-            <%# <li><a href="#">Separated link</a></li> %>
-            <li><%= link_to "Learn Ruby", "https://www.learnrubyonline.org/" %></li>
-            <li role="separator" class="divider"></li>
-            <%# <li><a href="#">One more separated link</a></li> %>
-            <li><%= link_to "Learn Rails", "https://guides.rubyonrails.org/" %></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Contact Us", contact_path, id: "contact_us"%></li>
-        <%# <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false", id="dropdown">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
+    <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+
+<ul class="nav navbar-nav navbar-right">
+
+<% if logged_in? %>
+
+    <li><%= link_to 'Log out', logout_path, method: :delete, id: "logout" %></li>
+
+    <li class="dropdown">
+
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="yourprofile">Your Profile<span class="caret"></span></a>
+
+        <ul class="dropdown-menu">
+
+            <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
+
+            <li><%= link_to "View your profile", user_path(current_user) %></li>
+
             <li><a href="#">Something else here</a></li>
+
             <li role="separator" class="divider"></li>
+
             <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+
+        </ul>
+
+    </li>
+
+<% else %>
+
+    <li><%= link_to 'Log in', login_path, id: "login" %></li>
+
+    <li><%= link_to 'Sign up', signup_path, id: "signup"%></li>
+
+<% end %>
+
+</ul>
+
+</div><!-- /.navbar-collapse -->
+
+</div><!-- /.container-fluid -->
+
 </nav>
