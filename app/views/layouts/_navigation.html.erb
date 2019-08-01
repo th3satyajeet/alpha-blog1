@@ -27,10 +27,12 @@
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 <ul class="nav navbar-nav">
-
+    <li><%= link_to "About Us", about_path, id: "about_us" %></li>
     <li><%= link_to "Articles", articles_path, id: "article" %></li>
 
     <li><%= link_to "Users", users_path, id: "users" %></li>
+    <li><%= link_to "Our Company", "https://www.einfochips.com/", id: "our-company" %></li>
+
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="actions">ROR Imp Docs<span class="caret"></span></a>
         <ul class="dropdown-menu">
