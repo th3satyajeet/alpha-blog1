@@ -30,7 +30,7 @@ $navbar-default-bg: rgb(1, 64, 100);
     width: max-content;
 }
 
-#article, #users, #about_us, #our-company, #actions, #signup, #yourprofile, #home, #contact_us, #ruby, #rails, #login, #logout{
+#article, #users, #about_us, #our-company, #actions, #signup, #yourprofile, #home, #contact, #ruby, #rails, #login, #logout{
     float: left;
     color: #EEE2DC;
     font-weight: bold;
@@ -66,10 +66,11 @@ $navbar-default-bg: rgb(1, 64, 100);
     font-weight: bold;
 }
 
-.edit-exist {
+.edit-exist, .articles-index, .users-index {
     text-align: center;
     color: #9A1750;
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .btn-lg {
@@ -103,6 +104,10 @@ $navbar-default-bg: rgb(1, 64, 100);
 .listing {
     list-style: none;
     padding-left: 0;   
+}
+
+.delete-admin {
+    color: red;
 }
 
 .footer {
