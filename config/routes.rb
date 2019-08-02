@@ -20,4 +20,7 @@ Rails.application.routes.draw do
   resources :articles
   #This one line will add  diff pages tht are required for like edit, update, delete etc.
 
+  #Resources for catagories
+  resources :categories, except: [:destroy]
+
 end
